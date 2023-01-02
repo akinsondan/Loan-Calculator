@@ -1,47 +1,6 @@
 type: edu
 custom_name: stage4
 files:
-- name: creditcalc/creditcalc.py
-  visible: true
-  text: "\n'''loan_principal = 'Loan principal: 1000'\nfinal_output = 'The loan has\
-    \ been repaid!'\nfirst_month = 'Month 1: repaid 250'\nsecond_month = 'Month 2:\
-    \ repaid 250'\nthird_month = 'Month 3: repaid 500'\nprint(loan_principal)\nprint(first_month)\n\
-    print(second_month)\nprint(third_month)\nprint(final_output)\nimport math\nloan\
-    \ = int(input('Enter the loan principal:'))'''\n#cacu = input('''What do you want\
-    \ to calculate?\n#type \"m\" for number of monthly payments,\n#type \"p\" for\
-    \ the monthly payment:''')\n'''if cacu == 'm':\n    user = int(input('Enter the\
-    \ monthly payment:'))\n    x = loan/user\n    x = math.ceil(x)\n    print()\n\
-    \    if loan/user == 1:\n        print(f'It will take {x} month to repay the loan')\n\
-    \    else:\n        print(f'It will take {x} months to repay the loan')\n\nelif\
-    \ cacu == 'p':\n    user = int(input('Enter the number of months:'))\n    x =\
-    \ loan/user\n    x = math.ceil(x)\n    l = loan - (x*(user-1))\n    print()\n\
-    \    if loan%user == 0:\n        print(f'Your monthly payment = {x}')\n    else:\n\
-    \        print(f'Your monthly payment = {x} and the last payment = {l}')'''\n\
-    \        \n        \nimport math\ncal = input('''What do you want to calculate?\n\
-    type \"n\" for number of monthly payments,\ntype \"a\" for annuity monthly payment\
-    \ amount,\ntype \"p\" for loan principal:''')\n\n\n\nif cal == 'n':\n    prin\
-    \ = float(input('Enter the loan principal:'))\n    mon_p = float(input('Enter\
-    \ the monthly payment:'))\n    interest = float(input('Enter the loan interest:'))\n\
-    \    i = float((interest/100)/12)\n    n = math.log((mon_p)/(mon_p-(i*prin)),1+i)\n\
-    \    n = math.ceil(n)\n    print(i,n)\n    \n    if n%12 == 0:\n        y = n//12\n\
-    \        print(f'It will take {y} years to repay this loan!')\n    else:\n   \
-    \     y = n//12\n        z = n%12\n        if y == 0:\n            print(f'It\
-    \ wil take {z} months to repay the loan!')\n        elif y == 1:\n           \
-    \ print(f'It will take {y} year and {z} months to repay thr loan!')\n        elif\
-    \ y > 1:\n            print(f'It will take {y} years and {z} months to repay thr\
-    \ loan!')\nelif cal == 'a':\n    prin = float(input('Enter the loan principal:'))\n\
-    \    months = float(input('Enter the number of periods:'))\n    interest = float(input('Enter\
-    \ the loan interest:'))\n    i = float((interest/100)/12)\n    mon_p = (prin*i*math.pow(1+i,\
-    \ months))/(math.pow(1+i, months)-1)\n    mon_p = math.ceil(mon_p)\n    l_mon\
-    \ = prin - (mon_p*(months-1))\n    if prin%months == 0:\n        print(f'Your\
-    \ monthly payment = {mon_p}')\n    else:\n        print(f'Your monthly payment\
-    \ = {mon_p} and the last payment = {l_mon}')\n\nelif cal == 'p':\n    mon_p =\
-    \ float(input('Enter the annuity payment:'))\n    months = float(input('Enter\
-    \ the number of periods:'))\n    interest = float(input('Enter the loan interest:'))\n\
-    \    i = float((interest/100)/12)\n    prin = mon_p/((i*math.pow(1+i, months))/(math.pow(1+i,\
-    \ months)-1))\n    prin = math.floor(prin)\n\n    print(f'Your loan principal\
-    \ = {prin}!')\n    \n\n\n    \n\n\n    \n\n\n    \n\n# write your code here\n"
-  learner_created: false
 - name: tests.py
   visible: false
   text: |
